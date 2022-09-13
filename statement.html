@@ -1,0 +1,288 @@
+<html>
+    <head>
+        
+          <script >
+   
+    function dvloop() {
+  var x = document.getElementById("dvloop");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function dvcon() {
+    var x = document.getElementById('dvcon');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function dvif() {
+    var x = document.getElementById('dvconif');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function checkif()
+			{
+			 var age;
+			age=Number(document.getElementById("age").value);
+			 if (age > 18) {
+			
+             document.getElementById('displayif').textContent="your age is: "+age +", you are eligible to vote";
+            }
+        }
+
+            function dvelse() {
+    var x = document.getElementById('dvconelse');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+function checkelse()
+			{
+			 var hour;
+			hour=Number(document.getElementById("hour").value);
+			if (hour < 18) {
+			
+             document.getElementById('displayelse').textContent="hour is: "+hour +", Good day";
+           } else
+            document.getElementById('displayelse').textContent="hour  is: "+hour +", Good evening"; 
+            
+        }
+          
+      
+        function dvifelse() {
+    var x = document.getElementById('dvconifelse');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function checkifelse()
+			{
+			 var no;
+			no=Number(document.getElementById("no").value);
+			 if(no>0 )
+			
+             document.getElementById('displayifelse').textContent="number: "+no +", number is positive ";
+             else   if(no<0 )
+             document.getElementById('displayifelse').textContent="number: "+no +", number is negative "; 
+             else  if(no=0)
+             document.getElementById('displayifelse').textContent="number: "+no +", number is 0"; 
+            
+            }   
+        
+        function dvswitch() {
+    var x = document.getElementById('dvconswitch');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function checkswitch()
+			{
+			 var score;
+			score=Number(document.getElementById("marks").value);
+			switch(true) {
+    case (score <= 100 && score >= 90):
+             document.getElementById('displayswitch').textContent="marks: "+score +", grade is A+ ";
+             break;
+    case (score <= 89 && score >= 80):
+             document.getElementById('displayswitch').textContent="marks: "+score +", grade is A "; 
+             break;
+    case (score <= 79 && score >= 70):
+             document.getElementById('displayswitch').textContent="marks: "+score +", grade is B"; 
+             break;
+       case (score <= 69 && score >= 60):
+      
+             document.getElementById('displayswitch').textContent="marks: "+score +", grade is C "; 
+             break;
+    case (score <= 59 && score >= 40):
+     
+             document.getElementById('displayswitch').textContent="marks: "+score +", grade is D "; 
+            break;
+            default: 
+             document.getElementById('displayswitch').textContent="marks: "+score +", fail "; 
+            }
+        }
+        function dvfor() {
+    var x = document.getElementById('dvloopfor');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function checkfor()
+			{
+			 var num;
+			num=Number(document.getElementById("num").value);
+            
+			sum=0;
+for (let i = 1; i <= num; i++) {
+           sum+=i;
+           }  document.getElementById('displayfor').innerHTML=sum;
+            }   
+
+
+
+            function dvwhile() {
+    var x = document.getElementById('dvloopwhile');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function checkwhile()
+			{
+                var f1,l1, result=' ';
+			f1=Number(document.getElementById("f1").value);
+            l1=Number(document.getElementById("l1").value);
+           
+           
+         
+            while (f1 <= l1) {
+                f1 = f1 + 1;
+  result = result + f1;
+}
+document.getElementById('displaywhile').innerHTML=result;
+            }   
+
+            function dvdo() {
+    var x = document.getElementById('dvloopdo');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+function checkdo()
+			{
+			
+                var n,  less=' ';
+			n=Number(document.getElementById("tab").value);
+          
+           
+           
+            do {
+                n= n- 1;
+                less = less + n;
+             
+}while (n >0)
+document.getElementById('displaydo').innerHTML=less;
+         
+            
+		
+  }
+             
+
+
+</script>
+    </head>
+
+
+
+
+
+<body>
+    <button onclick="dvcon()">conditional statement</button>
+
+<div id="dvcon" STYLE="display:none">
+    
+        <button type="button" onclick="dvif()"> if statement</button>
+        <button type="button" onclick="dvelse()"> if else statement </button>
+        <button type="button" onclick="dvifelse()"> if else if statement</button>
+        <button type="button" onclick="dvswitch()">switch statement</button>
+       
+    
+   
+</div>
+ <div id="dvconif" STYLE="display:none">
+            enter your age:<input type="text" id="age">
+            <button type="button" onclick="checkif()"> check eligibility to vote </button>
+         (age should be greater than 18)   <br>
+   <label>Your input: </label> 
+            <p><span id='displayif'></span></p>           </div> 
+
+            <div id="dvconelse" STYLE="display:none">
+                enter the hour:<input type="text" id="hour">
+                <button type="button" onclick="checkelse()"> greeting </button>
+               <br>
+       <label>Your input: </label> 
+                <p><span id='displayelse'></span></p>           </div> 
+           
+                <div id="dvconifelse" STYLE="display:none">
+                    enter a no:<input type="text" id="no">
+                    <button type="button" onclick="checkifelse()"> check  </button>
+                   <br>
+           <label>Your input: </label> 
+                    <p><span id='displayifelse'></span></p>           </div>      
+                    
+                    <div id="dvconswitch" STYLE="display:none">
+                        enter your marks:<input type="text" id="marks">
+                        <button type="button" onclick="checkswitch()"> check your grade </button>
+                       <br>
+               <label>Your input: </label> 
+                        <p><span id='displayswitch'></span></p>           </div>  
+<br>
+<br>
+<br>
+  <hr>
+  <br>
+  <br>
+  <br>
+<button onclick="dvloop()">looping statement</button>
+
+<div id="dvloop" STYLE="display:none">
+    
+      
+        <input type="button" value="for statement" onclick="dvfor()" />
+     <input type="button" value="while statement" onclick="dvwhile()" />
+      <input type="button" value=" do while statement" onclick="dvdo()" />
+
+</div>
+<div id="dvloopfor" STYLE="display:none">
+    enter a natural number :<input type="text" id="num">
+    
+    <button type="button" onclick="checkfor()"> click </button>
+   <br>
+<label>sum of natural number:</label> 
+    <p><span id='displayfor'></span></p>           </div> 
+
+
+ 
+
+    <div id="dvloopwhile" STYLE="display:none">
+    enter a first number :<input type="text" id="f1">
+    enter a last number :<input type="text" id="l1">
+    <button type="button" onclick="checkwhile()"> click </button>
+    <br>
+    <label>result:</label> 
+        <p><span id='displaywhile'></span></p>         </div> 
+
+
+    <div id="dvloopdo" STYLE="display:none">
+    enter a number :<input type="text" id="tab">
+    <button type="button" onclick="checkdo()"> click </button>
+    <br>
+    <label>reverse number less than number :</label> 
+        <p><span id='displaydo'></span></p>
+         </div>  
+</body>    
+</html>
