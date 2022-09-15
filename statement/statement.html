@@ -1,0 +1,84 @@
+<html>
+    <head>      
+          <script src="statement.js">
+</script>
+    </head>
+
+<body>
+    <button onclick="dvcon()">conditional statement</button>
+
+<div id="dvcon" STYLE="display:none">
+    
+        <button type="button" onclick="dvif()"> if statement</button>
+        <button type="button" onclick="dvelse()"> if else statement </button>
+        <button type="button" onclick="dvifelse()"> if else if statement</button>
+        <button type="button" onclick="dvswitch()">switch statement</button>
+ 
+</div>
+ <div id="dvconif" STYLE="display:none">
+            enter your age:<input type="text" id="age">
+            <button type="button" onclick="checkif()"> check eligibility to vote </button>
+         (age should be greater than 18)   <br>
+   <label>Your input: </label> 
+            <p><span id='displayif'></span></p>           </div> 
+
+            <div id="dvconelse" STYLE="display:none">
+                enter the hour:<input type="text" id="hour">
+                <button type="button" onclick="checkelse()"> greeting </button>
+               <br>
+       <label>Your input: </label> 
+                <p><span id='displayelse'></span></p>           </div> 
+           
+                <div id="dvconifelse" STYLE="display:none">
+                    enter a no:<input type="text" id="no">
+                    <button type="button" onclick="checkifelse()"> check  </button>
+                   <br>
+           <label>Your input: </label> 
+                    <p><span id='displayifelse'></span></p>           </div>      
+                    
+                    <div id="dvconswitch" STYLE="display:none">
+                        enter your marks:<input type="text" id="marks">
+                        <button type="button" onclick="checkswitch()"> check your grade </button>
+                       <br>
+               <label>Your input: </label> 
+                        <p><span id='displayswitch'></span></p>           </div>  
+<br>
+<br>
+<br>
+  <hr>
+  <br>
+  <br>
+  <br>
+<button onclick="dvloop()">looping statement</button>
+
+<div id="dvloop" STYLE="display:none">
+    
+      
+        <input type="button" value="for statement" onclick="dvfor()" />
+     <input type="button" value="while statement" onclick="dvwhile()" />
+      <input type="button" value=" do while statement" onclick="dvdo()" />
+
+</div>
+<div id="dvloopfor" STYLE="display:none">
+    enter a natural number :<input type="text" id="num">
+    
+    <button type="button" onclick="checkfor()"> click </button>
+   <br>
+<label>sum of natural number:</label> 
+    <p><span id='displayfor'></span></p>           </div> 
+    <div id="dvloopwhile" STYLE="display:none">
+    enter a first number :<input type="text" id="f1">
+    enter a last number :<input type="text" id="l1">
+    <button type="button" onclick="checkwhile()"> click </button>
+    <br>
+    <label>result:</label> 
+        <p><span id='displaywhile'></span></p>         </div> 
+    <div id="dvloopdo" STYLE="display:none">
+    enter a number :<input type="text" id="tab">
+    <button type="button" onclick="checkdo()"> click </button>
+    <br>
+    <label>reverse number less than number :</label> 
+        <p><span id='displaydo'></span></p>
+         </div>  
+</body>    
+</html>
